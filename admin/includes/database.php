@@ -22,18 +22,27 @@ class Database
 		}
 	}
 
-	public function query($sqli)
+	public function query($sql)
 	{
-		$result = mysqli_query($this->connection, $sqli);
+		$result = mysqli_query($this->connection, $sql);
+		
+		return $result;
+	}
 
+	private function confirm_query($result)
+	{
 		if(!$result)
 		{
 			die("Query failed." . mysqli_errno());
 		}
-
-		return $result;
 	}
-	
+
+	public function escape_string($string)
+	{
+		$escaped_string = mysqli_real_escape_string($this->connection, $string);
+
+		return $escaped_string;
+	}
 
 
 }
