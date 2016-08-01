@@ -4,7 +4,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
            
 
-                <?php include('includes/top_nav.php');?>
+            <?php include('includes/top_nav.php');?>
 
 
 

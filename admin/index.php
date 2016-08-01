@@ -4,7 +4,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
            
 
-                <?php include('includes/top_nav.php');?>
+            <?php include('includes/top_nav.php');?>
 
 
 
@@ -24,7 +24,7 @@
 
         <div id="page-wrapper">
 
-        <?php include("includes/admin_content.php");?>    
+            <?php include("includes/admin_content.php");?>    
 
         </div>
         <!-- /#page-wrapper -->
