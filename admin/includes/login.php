@@ -12,10 +12,13 @@ if(isset($_POST['submit']))
 	$password = trim($_POST['username']);
 
 //method to check for user in the database
+$user_found = User::verify_user($username, $password);
+
+
 
 	if($user_found)
 	{
-		$session->login();
+		$session->login($user_found);
 		redirect("index.php");
 	}
 	else
