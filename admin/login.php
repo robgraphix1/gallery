@@ -9,7 +9,7 @@ if($session->is_signed_in())
 if(isset($_POST['submit']))
 {
 	$username = trim($_POST['username']);
-	$password = trim($_POST['username']);
+	$password = trim($_POST['password']);
 
 	//method to check for user in the database
 	$user_found = User::verify_user($username, $password);
